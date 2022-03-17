@@ -1,5 +1,8 @@
-
-
+CREATE OR REPLACE PROCEDURE USP_CLAIMS_PLATFORMMEMBERS()
+  RETURNS VARCHAR(10)
+  LANGUAGE javascript
+  AS
+  $$
        var cmd=`TRUNCATE VSM.ALERTS;`;
        var sql=snowflake.createStatement({sqlText: cmd});
        sql.execute();
@@ -133,3 +136,4 @@ LEFT JOIN
     var sql=snowflake.createStatement({sqlText: cmd});
     sql.execute();
     return 'done';
+$$

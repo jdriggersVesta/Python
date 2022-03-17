@@ -1,4 +1,8 @@
-
+CREATE OR REPLACE PROCEDURE USP_CLAIMS_PLATFORMMEMBERS()
+  RETURNS VARCHAR(10)
+  LANGUAGE javascript
+  AS
+  $$
 var cmd=`TRUNCATE VESTA.VESTA_MEMBERCENSUS_NEW;`;
   var sql=snowflake.createStatement({sqlText: cmd});
   sql.execute();
@@ -292,3 +296,4 @@ var cmd=`TRUNCATE VESTA.VESTA_MEMBERCENSUS_NEW;`;
 var sql=snowflake.createStatement({sqlText: cmd});
 sql.execute();
 return 'done';
+$$
