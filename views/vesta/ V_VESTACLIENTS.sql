@@ -10,7 +10,7 @@ AS
     p.NAME AS PROGRAM_NAME,
     p.ABBR AS PROGRAM_ABBR
     FROM 
-        "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" pcm
+        "VESTA"."V_PROGRAM_CONFIGURATION_MEMBERS" pcm
     LEFT JOIN
         "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_ORGANIZATIONS" pco ON pcm.program_configuration_id = pco.program_configuration_id 
                                                 AND pco.role = 'CLIENT'

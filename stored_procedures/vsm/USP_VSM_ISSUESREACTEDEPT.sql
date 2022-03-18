@@ -148,7 +148,7 @@ LEFT JOIN
           INNER JOIN
           "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PATIENT_CAREGIVERS" pc ON pdr.patient_caregiver_id = pc.id
           INNER JOIN
-          "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" pcm ON pc.program_configuration_member_id = pcm.id
+          "VESTA"."V_PROGRAM_CONFIGURATION_MEMBERS" pcm ON pc.program_configuration_member_id = pcm.id
           )x ON x.member_id = pp.id
 
           WHERE pp.test = 'false'

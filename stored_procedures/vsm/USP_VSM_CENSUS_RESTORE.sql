@@ -163,7 +163,7 @@ var cmd=`TRUNCATE VESTA.VESTA_MEMBERCENSUS;`;
                       ,o.program_abbr
                       ,o.program_configid
                   FROM 
-                      "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" pcm
+                      VESTA.V_PROGRAM_CONFIGURATION_MEMBERS pcm
                   LEFT JOIN
                       VESTA.V_VESTACLIENTS o ON pcm.program_configuration_id = o.program_configid
                )o ON o.dash_id = p.id

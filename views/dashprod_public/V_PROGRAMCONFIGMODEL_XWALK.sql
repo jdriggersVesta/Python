@@ -16,7 +16,7 @@ WHEN pcm.id IS NULL THEN 'Unk' ELSE CAST(pcm.id AS varchar) END || '-' ||
 CASE
 WHEN pcm.member_id IS NULL THEN 'Unk' ELSE CAST(pcm.member_id AS varchar) END
 AS pcm_id_xwalk
-from "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" as pcm
+from "VESTA_PRODUCTION"."VESTA"."V_PROGRAM_CONFIGURATION_MEMBERS" as pcm
 --0+1
 UNION
 select pcm.member_id as dash_id, pcm.id as pcm_id,
@@ -28,7 +28,7 @@ AS program_configuration_member_id_xwalk,
 CASE
 WHEN pcm.member_id IS NULL THEN 'Unk' ELSE CAST(pcm.member_id AS varchar) END
 AS pcm_id_xwalk
-from "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" as pcm
+from "VESTA_PRODUCTION"."VESTA"."V_PROGRAM_CONFIGURATION_MEMBERS" as pcm
 --1+0
 UNION 
 select pcm.member_id as dash_id, pcm.id as pcm_id,
@@ -38,7 +38,7 @@ AS program_configuration_member_id_xwalk,
 CASE 
 WHEN pcm.id IS NULL THEN 'Unk' ELSE CAST(pcm.id AS varchar) END || '-Unk'
 AS pcm_id_xwalk
-from "PC_FIVETRAN_DB"."DASHPROD_PUBLIC"."PROGRAM_CONFIGURATION_MEMBERS" as pcm
+from "VESTA_PRODUCTION"."VESTA"."V_PROGRAM_CONFIGURATION_MEMBERS" as pcm
 UNION 
 select id as dash_id, null as pcm_id, 
 'Unk-' || CAST(id AS varchar) AS program_configuration_member_id_xwalk,

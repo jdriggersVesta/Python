@@ -77,7 +77,7 @@ CREATE OR REPLACE PROCEDURE USP_CLAIMS_PLATFORMMEMBERS()
       INNER JOIN
         pc_fivetran_db.dashprod_public.Patient_caregivers pc ON pdr.patient_caregiver_id = pc.id
       INNER JOIN
-        pc_fivetran_db.dashprod_public.Program_configuration_members pcm ON pc.program_configuration_member_id = pcm.id
+        vesta.v_program_configuration_members pcm ON pc.program_configuration_member_id = pcm.id
               )x ON x.member_id = pp.id
         WHERE pp.test = 'false' AND pp.enabled = 'true') as pp
 
@@ -88,7 +88,7 @@ CREATE OR REPLACE PROCEDURE USP_CLAIMS_PLATFORMMEMBERS()
           pc.type, pc.updated_at, p.name as program_name, p.effective_date as program_effective_date,
           p.discontinue_date as program_discontinue_date, pco.id as pco_id, pco.role,
           o.id as org_id, o.name as org_name, o.abbr as org_abbr
-         from pc_fivetran_db.dashprod_public.program_configuration_members as pcm
+         from vesta.v_program_configuration_members as pcm
             left join pc_fivetran_db.dashprod_public.program_configurations as pc on pcm.program_configuration_id = pc.id
             left join pc_fivetran_db.dashprod_public.programs as p on pc.program_id = p.id
             left join pc_fivetran_db.dashprod_public.program_configuration_organizations as pco 
