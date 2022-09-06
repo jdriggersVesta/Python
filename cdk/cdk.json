@@ -1,0 +1,43 @@
+{
+  "app": "npx ts-node --prefer-ts-exts index.ts",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:stackRelativeExports": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "aws-cdk:enableDiffNoFail": true,
+
+    "App": "analytics",
+
+    "qa1": {
+      "AWSAccountID": "053089994161",
+      "AWSProfileRegion": "us-east-1",
+      "VpcId": "vpc-06fce41c3a9fc8294",
+      "CDKAssetsBucket": "cdktoolkit-stagingbucket-stage",
+      "RAM": 1024,
+      "CPU": 512,
+      "NumInstances": 0
+    },
+
+    "stage": {
+      "AWSAccountID": "053089994161",
+      "AWSProfileRegion": "us-east-1",
+      "VpcId": "vpc-06fce41c3a9fc8294",
+      "CDKAssetsBucket": "cdktoolkit-stagingbucket-stage",
+      "RAM": 1024,
+      "CPU": 512,
+      "NumInstances": 1
+    },
+
+    "prod": {
+      "AWSAccountID": "693294248006",
+      "AWSProfileRegion": "us-east-1",
+      "VpcId": "vpc-028188c9932884efb",
+      "CDKAssetsBucket": "cdktoolkit-stagingbucket-prod-3z0z9vkei",
+      "RAM": 1024,
+      "CPU": 512,
+      "NumInstances": 1
+    }
+  }
+}
