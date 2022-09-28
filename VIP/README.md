@@ -5,6 +5,7 @@
 * https://docs.anaconda.com/anaconda/install/windows/
 
 ## Install Missing Libraries
+I had to manually install snowflake connector and imblearn libraries by creating a new env in Anaconda gui.
 
 ## Adding Snowflake Credentials to Local Environment Variables
 Add your Snowflake credentials to windows local environment variables
@@ -14,3 +15,9 @@ Add your Snowflake credentials to windows local environment variables
     password = os.getenv('Snowflake_password')
     account = os.getenv('Snowflake_account')
 ```
+## Getting Started
+Watch the video on the VIP process created by Matt W.
+https://drive.google.com/file/d/1y2iCuRIZS35V4fDLeuLzWE7PK5i1FYq8/view?usp=sharing
+
+Start executing the first code block, importing libraries
+Continue executing each code block as instructed in the walkthrough video. You will then restart the kernal and clear all outputs so you can run the final model.
