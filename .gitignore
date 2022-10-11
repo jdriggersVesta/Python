@@ -49,3 +49,5 @@ target/
 .aws-sam
 package.yml
 
+/stored_procedures/
+/views/
