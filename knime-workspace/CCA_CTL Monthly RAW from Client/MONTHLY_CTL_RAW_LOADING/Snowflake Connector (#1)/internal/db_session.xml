@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="db_session">
+    <config key="Session Info">
+        <entry key="version" type="xint" value="3"/>
+        <entry key="sessionID" type="xstring" value="6c58ab3a-0e58-4e8f-b2c0-6a4e84c406ad"/>
+        <entry key="dbTypeId" type="xstring" value="snowflake"/>
+        <entry key="dialectId" type="xstring" value="snowflake"/>
+        <entry key="dbURL" type="xstring" value="jdbc:snowflake://vh83029.us-east-1.snowflakecomputing.com/?warehouse=ANALYST_BASIC&amp;role=SYSADMIN&amp;db=VESTA_DEVELOPMENT&amp;schema=ANALYST_SANDBOX"/>
+        <entry key="authenticationType" type="xstring" value="CREDENTIALS"/>
+        <entry key="credentials" type="xstring" value="credentials"/>
+        <entry key="host" type="xstring" isnull="true" value=""/>
+    </config>
+    <config key="Driver Definition">
+        <entry key="driverId" type="xstring" value="built-in-snowflake-3.13.4"/>
+        <entry key="driverName" type="xstring" value="Snowflake 3.13.4"/>
+        <entry key="driverVersion" type="xstring" value="3.13.0"/>
+        <entry key="driverClass" type="xstring" value="net.snowflake.client.jdbc.SnowflakeDriver"/>
+        <entry key="driverDescription" type="xstring" value=""/>
+        <entry key="driverOrigin" type="xstring" value="EXTENSION"/>
+    </config>
+    <config key="Attributes">
+        <config key="java.lang.Boolean">
+            <entry key="knime.db.connection.restore" type="xboolean" value="true"/>
+            <entry key="knime.db.connection.reconnect" type="xboolean" value="true"/>
+        </config>
+    </config>
+</config>

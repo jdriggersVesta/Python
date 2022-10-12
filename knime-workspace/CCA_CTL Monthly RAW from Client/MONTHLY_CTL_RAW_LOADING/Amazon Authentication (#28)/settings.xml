@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="auth_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_authentication"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="switchRole" type="xboolean" value="false"/>
+        <entry key="ssencryption" type="xboolean" value="false"/>
+        <config key="auth">
+            <entry key="selectedType" type="xstring" value="USER_PWD"/>
+            <entry key="password" type="xpassword" value="02KAAAAGMq_QxveL1vZ0EBj10u9-e6cxIwZApJ-7GhUEywgMK75DpEJe_-aEzKnbmdtUhdEAg2FgC5X7K0"/>
+            <entry key="credentials" type="xstring" isnull="true" value=""/>
+            <entry key="username" type="xstring" value="AKIA2C24OWBDK2CM6442"/>
+        </config>
+        <config key="useSessionToken_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="useSessionToken" type="xboolean" value="false"/>
+        <entry key="timeout" type="xint" value="30000"/>
+        <entry key="switchRoleAccount" type="xstring" value=""/>
+        <config key="switchRole_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="ssencryption_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="sessionToken" type="xstring" value=""/>
+        <config key="switchRoleAccount_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <config key="switchRoleName_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="switchRoleName" type="xstring" value=""/>
+        <config key="region_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="region" type="xstring" value="us-east-1"/>
+        <config key="sessionToken_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <config key="timeout_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.cloud.aws.nodes.connector.AmazonAuthenticationNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Amazon Authentication"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Amazon Cloud Connectors"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.cloud.aws"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="4.6.1.v202207182243"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Amazon Cloud Connectors"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.cloud.aws.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="4.6.2.v202209150849"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Amazon Authentication"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>
