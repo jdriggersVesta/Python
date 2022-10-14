@@ -1,3 +1,4 @@
+-- noinspection SqlResolve
 CREATE OR REPLACE VIEW VESTA.V_REVISION_LOGS
 AS
 SELECT 

@@ -1,0 +1,13 @@
+/hometeam-clinical-data/
+/hometeam-clinical-data
+/
+/hometeam-clinical-data/raw/cca/Element MDS 202209.zip/
+/hometeam-clinical-data/raw/cca/Element MDS 202209.zip
+s3://hometeam-clinical-data/raw/cca/Element MDS 202209.zip
+/hometeam-clinical-data/raw/cca/
+//hometeam-clinical-data/raw/cca/
+/s3://hometeam-clinical-data/raw/cca/
+s3://hometeam-clinical-data/raw/cca/
+arn:aws:s3:::hometeam-clinical-data/raw/cca/
+//hometeam-clinical-data
+hometeam-clinical-data/raw/cca/
