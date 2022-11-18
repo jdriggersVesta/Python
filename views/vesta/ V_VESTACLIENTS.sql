@@ -1,12 +1,53 @@
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile
+
+-- noinspection SqlResolveForFile,SqlResolve
+
 CREATE OR REPLACE VIEW V_VESTACLIENTS
 AS
 (
- SELECT DISTINCT 
-    pco.ORGANIZATION_ID AS CLIENT_ID,
-    o.NAME AS CLIENT_NAME,
-    o.ABBR AS CLIENT_ABBR,
-    pcm.PROGRAM_CONFIGURATION_ID AS program_configid,
-    --TYPE,
+SELECT DISTINCT pco.ORGANIZATION_ID          AS CLIENT_ID,
+                o.NAME                       AS CLIENT_NAME,
+                o.ABBR                       AS CLIENT_ABBR,
+                pcm.PROGRAM_CONFIGURATION_ID AS program_configid,
+                --TYPE,
     p.NAME AS PROGRAM_NAME,
     p.ABBR AS PROGRAM_ABBR
     FROM 

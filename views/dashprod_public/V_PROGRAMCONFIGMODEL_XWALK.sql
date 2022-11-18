@@ -1,3 +1,4 @@
+-- noinspection SqlResolve
 create or replace view PC_FIVETRAN_DB.DASHPROD_PUBLIC.V_PROGRAMCONFIGMODEL_XWALK(
 	DASH_ID,
 	PCM_ID,

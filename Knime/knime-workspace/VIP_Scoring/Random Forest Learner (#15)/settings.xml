@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd"
+        key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="targetColumn" type="xstring" value="RC_CLEAN"/>
+        <entry key="seed" type="xstring" value="1663940044879"/>
+        <entry key="maxLevels" type="xint" value="-1"/>
+        <entry key="minNodeSize" type="xint" value="-1"/>
+        <entry key="minChildSize" type="xint" value="-1"/>
+        <entry key="dataFraction" type="xdouble" value="1.0"/>
+        <entry key="isDataSelectionWithReplacement" type="xboolean" value="true"/>
+        <entry key="hardCodedRootColumn" type="xstring" isnull="true" value=""/>
+        <entry key="columnSamplingMode" type="xstring" value="SquareRoot"/>
+        <entry key="columnFractionPerTree" type="xdouble" value="1.0"/>
+        <entry key="columnAbsolutePerTree" type="xint" value="10"/>
+        <entry key="isUseDifferentAttributesAtEachNode" type="xboolean" value="true"/>
+        <entry key="nrModels" type="xint" value="100"/>
+        <entry key="splitCriterion" type="xstring" value="InformationGainRatio"/>
+        <entry key="missingValueHandling" type="xstring" value="XGBoost"/>
+        <entry key="useAverageSplitPoints" type="xboolean" value="true"/>
+        <entry key="useBinaryNominalSplits" type="xboolean" value="true"/>
+        <entry key="fingerprintColumn" type="xstring" isnull="true" value=""/>
+        <config key="columnFilterConfig">
+            <entry key="filter-type" type="xstring" value="STANDARD"/>
+            <config key="included_names">
+                <entry key="array-size" type="xint" value="132"/>
+                <entry key="0" type="xstring" value="ED_IP_VISIT"/>
+                <entry key="1" type="xstring" value="ACSC__COUNT"/>
+                <entry key="2" type="xstring" value="ACSC__SCORE"/>
+                <entry key="3" type="xstring" value="ACSC_A_FIB_AND_FLUTTER"/>
+                <entry key="4" type="xstring" value="ACSC_ALCOHOL_RELATED"/>
+                <entry key="5" type="xstring" value="ACSC_ANEMIA"/>
+                <entry key="6" type="xstring" value="ACSC_ANGINA"/>
+                <entry key="7" type="xstring" value="ACSC_ASTHMA"/>
+                <entry key="8" type="xstring" value="ACSC_CELLULITIS"/>
+                <entry key="9" type="xstring" value="ACSC_CONGESTIVE_HEART_FAILURE"/>
+                <entry key="10" type="xstring" value="ACSC_CONSTIPATION"/>
+                <entry key="11" type="xstring" value="ACSC_CONVULSION_EPILEPSY"/>
+                <entry key="12" type="xstring" value="ACSC_COPD"/>
+                <entry key="13" type="xstring" value="ACSC_DECUBITI_STAGE_3_"/>
+                <entry key="14" type="xstring" value="ACSC_DEHYDRATION_GASTROENTERITIS"/>
+                <entry key="15" type="xstring" value="ACSC_DIABETES_COMPLICATIONS"/>
+                <entry key="16" type="xstring" value="ACSC_DYSPEPSIA"/>
+                <entry key="17" type="xstring" value="ACSC_ENT_INFECTION"/>
+                <entry key="18" type="xstring" value="ACSC_HYPERTENSION"/>
+                <entry key="19" type="xstring" value="ACSC_HYPOGLYCEMIA"/>
+                <entry key="20" type="xstring" value="ACSC_HYPOKALEMIA"/>
+                <entry key="21" type="xstring" value="ACSC_INFLUENZA_PNEUMONIA"/>
+                <entry key="22" type="xstring" value="ACSC_MIGRAINE_HEADACHE"/>
+                <entry key="23" type="xstring" value="ACSC_NUTRITION_DEFICIENT"/>
+                <entry key="24" type="xstring" value="ACSC_PERFORATED_BLEEDING_ULCER"/>
+                <entry key="25" type="xstring" value="ACSC_PROXIMAL_FEMUR_FRACTURE"/>
+                <entry key="26" type="xstring" value="ACSC_PYELONEPHRITIS"/>
+                <entry key="27" type="xstring" value="ACSC_UTI"/>
+                <entry key="28" type="xstring" value="ACSC_VACCINE_PREVENTABLE_DX"/>
+                <entry key="29" type="xstring" value="AGE"/>
+                <entry key="30" type="xstring" value="AMB_ACSC_COST"/>
+                <entry key="31" type="xstring" value="AMB_ACSC_COUNT"/>
+                <entry key="32" type="xstring" value="BH__COUNT"/>
+                <entry key="33" type="xstring" value="BH__SCORE"/>
+                <entry key="34" type="xstring" value="BH_ALTERED_MENTAL_STATE"/>
+                <entry key="35" type="xstring" value="BH_ALZHEIMERS_DEMENTIA"/>
+                <entry key="36" type="xstring" value="BH_ANXIETY"/>
+                <entry key="37" type="xstring" value="BH_BI_POLAR"/>
+                <entry key="38" type="xstring" value="BH_DEPRESSION"/>
+                <entry key="39" type="xstring" value="BH_SCHIZOPHRENIA"/>
+                <entry key="40" type="xstring" value="BH_SUBABUSE"/>
+                <entry key="41" type="xstring" value="CRN__COUNT"/>
+                <entry key="42" type="xstring" value="CRN_AFIB"/>
+                <entry key="43" type="xstring" value="CRN_ASTHMA"/>
+                <entry key="44" type="xstring" value="CRN_CARDIOVASCULAR_DX"/>
+                <entry key="45" type="xstring" value="CRN_CHRONIC_KIDNEY_DISEASE"/>
+                <entry key="46" type="xstring" value="CRN_CONGESTIVE_HEART_FAILURE"/>
+                <entry key="47" type="xstring" value="CRN_COPD"/>
+                <entry key="48" type="xstring" value="CRN_DIABETES_W__ACUTE_COMP"/>
+                <entry key="49" type="xstring" value="CRN_DIABETES_W__CHRONIC_COMP"/>
+                <entry key="50" type="xstring" value="CRN_DIABETES_W_OUT_COMP"/>
+                <entry key="51" type="xstring" value="CRN_FALLS"/>
+                <entry key="52" type="xstring" value="CRN_GASTRO_ESOPH_REFLUX"/>
+                <entry key="53" type="xstring" value="CRN_HIP_FRACTURE"/>
+                <entry key="54" type="xstring" value="CRN_HTN"/>
+                <entry key="55" type="xstring" value="CRN_OBESITY"/>
+                <entry key="56" type="xstring" value="CRN_OSTEOPOROSIS"/>
+                <entry key="57" type="xstring" value="CRN_PARKINSONS_DISEASE"/>
+                <entry key="58" type="xstring" value="CRN_PRESSURE_ULCER"/>
+                <entry key="59" type="xstring" value="CRN_PRIOR_MI"/>
+                <entry key="60" type="xstring" value="CRN_PRIOR_STROKE"/>
+                <entry key="61" type="xstring" value="CRN_SCORE"/>
+                <entry key="62" type="xstring" value="CRN_SLEEP_APNEA"/>
+                <entry key="63" type="xstring" value="CRN_SMOKING"/>
+                <entry key="64" type="xstring" value="CRN_UTI"/>
+                <entry key="65" type="xstring" value="DYAD_CKD_DD"/>
+                <entry key="66" type="xstring" value="DYAD_CKD_OP"/>
+                <entry key="67" type="xstring" value="DYAD_COPD_DD"/>
+                <entry key="68" type="xstring" value="DYAD_COPD_HF"/>
+                <entry key="69" type="xstring" value="DYAD_COPD_OP"/>
+                <entry key="70" type="xstring" value="DYAD_COUNT"/>
+                <entry key="71" type="xstring" value="DYAD_DM_CKD"/>
+                <entry key="72" type="xstring" value="DYAD_DM_OP"/>
+                <entry key="73" type="xstring" value="DYAD_HBP_HF"/>
+                <entry key="74" type="xstring" value="DYAD_HF_CKD"/>
+                <entry key="75" type="xstring" value="ED_ACSC_COST"/>
+                <entry key="76" type="xstring" value="ED_ACSC_COUNT"/>
+                <entry key="77" type="xstring" value="GENDER"/>
+                <entry key="78" type="xstring" value="GROUP"/>
+                <entry key="79" type="xstring" value="HMKR_ACSC_COST"/>
+                <entry key="80" type="xstring" value="HMKR_ACSC_COUNT"/>
+                <entry key="81" type="xstring" value="HTI_RISK_SCORE_V2_1"/>
+                <entry key="82" type="xstring" value="IP_ACSC_COST"/>
+                <entry key="83" type="xstring" value="IP_ACSC_COUNT"/>
+                <entry key="84" type="xstring" value="IP_READMIT_ACSC_COST"/>
+                <entry key="85" type="xstring" value="IP_READMIT_ACSC_COUNT"/>
+                <entry key="86" type="xstring" value="IP_RHB_ACSC_COST"/>
+                <entry key="87" type="xstring" value="IP_RHB_ACSC_COUNT"/>
+                <entry key="88" type="xstring" value="LANGUAGE_SPOKEN_CLEAN"/>
+                <entry key="89" type="xstring" value="NI_COST_DENT"/>
+                <entry key="90" type="xstring" value="NI_COST_ED"/>
+                <entry key="91" type="xstring" value="NI_COST_HM"/>
+                <entry key="92" type="xstring" value="NI_COST_HMKR"/>
+                <entry key="93" type="xstring" value="NI_COST_HS"/>
+                <entry key="94" type="xstring" value="NI_COST_IP"/>
+                <entry key="95" type="xstring" value="NI_COST_IP_RHB"/>
+                <entry key="96" type="xstring" value="NI_COST_OP"/>
+                <entry key="97" type="xstring" value="NI_COST_OTH"/>
+                <entry key="98" type="xstring" value="NI_COST_PCA_T1020"/>
+                <entry key="99" type="xstring" value="NI_COST_PCA_T1019"/>
+                <entry key="100" type="xstring" value="NI_COST_PR"/>
+                <entry key="101" type="xstring" value="NI_COST_PSYC"/>
+                <entry key="102" type="xstring" value="NI_COST_RX"/>
+                <entry key="103" type="xstring" value="NI_COUNT_DENT"/>
+                <entry key="104" type="xstring" value="NI_COUNT_ED"/>
+                <entry key="105" type="xstring" value="NI_COUNT_HM"/>
+                <entry key="106" type="xstring" value="NI_COUNT_HMKR"/>
+                <entry key="107" type="xstring" value="NI_COUNT_HS"/>
+                <entry key="108" type="xstring" value="NI_COUNT_IP"/>
+                <entry key="109" type="xstring" value="NI_COUNT_IP_RHB"/>
+                <entry key="110" type="xstring" value="NI_COUNT_OP"/>
+                <entry key="111" type="xstring" value="NI_COUNT_OTH"/>
+                <entry key="112" type="xstring" value="NI_COUNT_PCA_T1020"/>
+                <entry key="113" type="xstring" value="NI_COUNT_PCA_T1019"/>
+                <entry key="114" type="xstring" value="NI_COUNT_PR"/>
+                <entry key="115" type="xstring" value="NI_COUNT_PSYC"/>
+                <entry key="116" type="xstring" value="NI_COUNT_RX"/>
+                <entry key="117" type="xstring" value="NON_IMPACTABLE_CLAIM_COUNT"/>
+                <entry key="118" type="xstring" value="OP_ACSC_COST"/>
+                <entry key="119" type="xstring" value="OP_ACSC_COUNT"/>
+                <entry key="120" type="xstring" value="PART_C_RISK_SCORE"/>
+                <entry key="121" type="xstring" value="PCA_T1020_ACSC_COUNT"/>
+                <entry key="122" type="xstring" value="PCA_T1020_ACSC_COST"/>
+                <entry key="123" type="xstring" value="PCA_T1019_ACSC_COUNT"/>
+                <entry key="124" type="xstring" value="PCA_T1019_ACSC_COST"/>
+                <entry key="125" type="xstring" value="PR_ACSC_COST"/>
+                <entry key="126" type="xstring" value="PR_ACSC_COUNT"/>
+                <entry key="127" type="xstring" value="SNF_COST"/>
+                <entry key="128" type="xstring" value="SNF_COUNT"/>
+                <entry key="129" type="xstring" value="TOTAL_IMPACTABLE_COST"/>
+                <entry key="130" type="xstring" value="TOTAL_IMPACTABLE_COST_PRO"/>
+                <entry key="131" type="xstring" value="TOTAL_NON_IMPACTABLE_COST"/>
+            </config>
+            <config key="excluded_names">
+                <entry key="array-size" type="xint" value="0"/>
+            </config>
+            <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
+            <config key="name_pattern">
+                <entry key="pattern" type="xstring" value=""/>
+                <entry key="type" type="xstring" value="Wildcard"/>
+                <entry key="caseSensitive" type="xboolean" value="true"/>
+                <entry key="excludeMatching" type="xboolean" value="false"/>
+            </config>
+            <config key="datatype">
+                <config key="typelist">
+                    <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
+                </config>
+            </config>
+        </config>
+        <entry key="ignoreColumnsWithoutDomain" type="xboolean" value="true"/>
+        <entry key="nrHilitePatterns" type="xint" value="-1"/>
+        <entry key="saveTargetDistributionInNodes" type="xboolean" value="false"/>
+        <entry key="rowSamplingMode" type="xstring" value="Random"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring"
+           value="org.knime.base.node.mine.treeensemble2.node.randomforest.learner.classification.RandomForestClassificationLearnerNodeFactory2"/>
+    <entry key="node-name" type="xstring" value="Random Forest Learner"/>
+    <entry key="node-bundle-name" type="xstring" value="Decisions Tree Ensembles for KNIME"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base.treeensembles2"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="4.6.0.v202206021022"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Ensemble Learning Wrappers"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.ensembles.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="4.6.0.v202206021022"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="Random Forest Learner"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+        <config key="port_2">
+            <entry key="index" type="xint" value="2"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+        <config key="port_3">
+            <entry key="index" type="xint" value="3"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

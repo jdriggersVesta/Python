@@ -1,3 +1,4 @@
+-- noinspection SqlResolve
 CREATE OR REPLACE VIEW VESTA_PRODUCTION.VESTA.V_PROGRAMCONFIGMODEL
 AS
 select pcm.member_id as dash_id, pcm.id as pcm_id,

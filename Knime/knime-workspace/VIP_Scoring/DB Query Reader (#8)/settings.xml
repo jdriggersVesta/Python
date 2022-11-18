@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd"
+        key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="sql_statement" type="xstring"
+               value="WITH EDIP AS ( //This is sub table for a self join%%00010%%00010    SELECT %%00010        *%%00010    FROM &quot;VESTA_DEVELOPMENT&quot;.&quot;CLAIMS_REPORTING&quot;.&quot;CCA_MEM_PROFILE_IP_ER_SNF&quot; //THIS NEEDS TO CHANGE BASED ON CLIENT%%00010    WHERE MEASURE = 'ED' or MEASURE = 'IP' %%00010%%00010    ),%%00010%%00010    EDIPTABLE AS ( //This table shows the Member ID, date start, and the number of ED/IP in the next 6 months%%00010%%00010    SELECT%%00010        SCORE.MEMBER_ID,%%00010        TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')) AS DATE_START,%%00010        COUNT(DISTINCT EDIP.DOS_FROM) AS ED_IP_VISITS_IN_NEXT_6_MONTHS%%00010    FROM &quot;VESTA_DEVELOPMENT&quot;.&quot;ANALYST_SANDBOX&quot;.&quot;CLNT_STRAT_VIP&quot; SCORE%%00010        LEFT JOIN EDIP %%00010            ON SCORE.MEMBER_ID = EDIP.MEMBER_ID%%00010                AND EDIP.DOS_FROM &gt; TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01'))%%00010                AND DATEDIFF(days,TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')),EDIP.DOS_FROM) &gt;= 45%%00010                AND DATEDIFF(days, TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')),EDIP.DOS_FROM) &lt;= 180%%00010    GROUP BY SCORE.MEMBER_ID,%%00010        DATE_START %%00010%%00010    )%%00010%%00010SELECT%%00010    //TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')) AS DATE_START,%%00010    //DATA_DATE_START,%%00010    //SCORE.MEMBER_ID,%%00010    CASE WHEN EDIPTABLE.ED_IP_VISITS_IN_NEXT_6_MONTHS &gt; 0 THEN 1 ELSE 0 END as ED_IP_VISIT,%%00010    ACSC__COUNT,%%00010    ACSC__SCORE,%%00010    ACSC_A_FIB_AND_FLUTTER,%%00010    ACSC_ALCOHOL_RELATED,%%00010    ACSC_ANEMIA,%%00010    ACSC_ANGINA,%%00010    ACSC_ASTHMA,%%00010    ACSC_CELLULITIS,%%00010    ACSC_CONGESTIVE_HEART_FAILURE,%%00010    ACSC_CONSTIPATION,%%00010    ACSC_CONVULSION_EPILEPSY,%%00010    ACSC_COPD,%%00010    ACSC_DECUBITI_STAGE_3_,%%00010    ACSC_DEHYDRATION_GASTROENTERITIS,%%00010    ACSC_DIABETES_COMPLICATIONS,%%00010    ACSC_DYSPEPSIA,%%00010    ACSC_ENT_INFECTION,%%00010    ACSC_HYPERTENSION,%%00010    ACSC_HYPOGLYCEMIA,%%00010    ACSC_HYPOKALEMIA,%%00010    ACSC_INFLUENZA_PNEUMONIA,%%00010    ACSC_MIGRAINE_HEADACHE,%%00010    ACSC_NUTRITION_DEFICIENT,%%00010    ACSC_PERFORATED_BLEEDING_ULCER,%%00010    ACSC_PROXIMAL_FEMUR_FRACTURE,%%00010    ACSC_PYELONEPHRITIS,%%00010    ACSC_UTI,%%00010    ACSC_VACCINE_PREVENTABLE_DX,%%00010    DATEDIFF(year,DOB, TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01'))) as AGE,%%00010    AMB_ACSC_COST,%%00010    AMB_ACSC_COUNT,%%00010    BH__COUNT,%%00010    BH__SCORE,%%00010    BH_ALTERED_MENTAL_STATE,%%00010    BH_ALZHEIMERS_DEMENTIA,%%00010    BH_ANXIETY,%%00010    BH_BI_POLAR,%%00010    BH_DEPRESSION,%%00010    BH_SCHIZOPHRENIA,%%00010    BH_SUBABUSE,%%00010    CRN__COUNT,%%00010    CRN_AFIB,%%00010    CRN_ASTHMA,%%00010    CRN_CARDIOVASCULAR_DX,%%00010    CRN_CHRONIC_KIDNEY_DISEASE,%%00010    CRN_CONGESTIVE_HEART_FAILURE,%%00010    CRN_COPD,%%00010    CRN_DIABETES_W__ACUTE_COMP,%%00010    CRN_DIABETES_W__CHRONIC_COMP,%%00010    CRN_DIABETES_W_OUT_COMP,%%00010    CRN_FALLS,%%00010    CRN_GASTRO_ESOPH_REFLUX,%%00010    CRN_HIP_FRACTURE,%%00010    CRN_HTN,%%00010    CRN_OBESITY,%%00010    CRN_OSTEOPOROSIS,%%00010    CRN_PARKINSONS_DISEASE,%%00010    CRN_PRESSURE_ULCER,%%00010    CRN_PRIOR_MI,%%00010    CRN_PRIOR_STROKE,%%00010    CRN_SCORE,%%00010    CRN_SLEEP_APNEA,%%00010    CRN_SMOKING,%%00010    CRN_UTI,%%00010    DYAD_CKD_DD,%%00010    DYAD_CKD_OP,%%00010    DYAD_COPD_DD,%%00010    DYAD_COPD_HF,%%00010    DYAD_COPD_OP,%%00010    DYAD_COUNT,%%00010    DYAD_DM_CKD,%%00010    DYAD_DM_OP,%%00010    DYAD_HBP_HF,%%00010    DYAD_HF_CKD,%%00010    ED_ACSC_COST,%%00010    ED_ACSC_COUNT,%%00010    GENDER,%%00010    CASE WHEN &quot;GROUP&quot; = 'E' THEN 'A' ELSE &quot;GROUP&quot; END as &quot;GROUP&quot;,%%00010    HMKR_ACSC_COST,%%00010    HMKR_ACSC_COUNT,%%00010    HTI_RISK_SCORE_V2_1,%%00010    IP_ACSC_COST,%%00010    IP_ACSC_COUNT,%%00010    IP_READMIT_ACSC_COST,%%00010    IP_READMIT_ACSC_COUNT,%%00010    IP_RHB_ACSC_COST,%%00010    IP_RHB_ACSC_COUNT,%%00010    CASE WHEN LANGUAGE_SPOKEN is NULL THEN 'Unknown'%%00010         WHEN LANGUAGE_SPOKEN = 'English' THEN 'English'%%00010         WHEN LANGUAGE_SPOKEN = 'Chinese' THEN 'Chinese'%%00010         WHEN LANGUAGE_SPOKEN = 'Spanish' THEN 'Spanish'%%00010         WHEN LANGUAGE_SPOKEN = 'Russian' THEN 'Russian'%%00010    ELSE 'Other' END AS LANGUAGE_SPOKEN_CLEAN,%%00010    NI_COST_DENT,%%00010    NI_COST_ED,%%00010    NI_COST_HM,%%00010    NI_COST_HMKR,%%00010    NI_COST_HS,%%00010    NI_COST_IP,%%00010    NI_COST_IP_RHB,%%00010    NI_COST_OP,%%00010    NI_COST_OTH,%%00010    NI_COST_PCA_T1020,%%00010    NI_COST_PCA_T1019,%%00010    NI_COST_PR,%%00010    NI_COST_PSYC,%%00010    NI_COST_RX,%%00010    NI_COUNT_DENT,%%00010    NI_COUNT_ED,%%00010    NI_COUNT_HM,%%00010    NI_COUNT_HMKR,%%00010    NI_COUNT_HS,%%00010    NI_COUNT_IP,%%00010    NI_COUNT_IP_RHB,%%00010    NI_COUNT_OP,%%00010    NI_COUNT_OTH,%%00010    NI_COUNT_PCA_T1020,%%00010    NI_COUNT_PCA_T1019,%%00010    NI_COUNT_PR,%%00010    NI_COUNT_PSYC,%%00010    NI_COUNT_RX,%%00010    NON_IMPACTABLE_CLAIM_COUNT,%%00010    OP_ACSC_COST,%%00010    OP_ACSC_COUNT,%%00010    CAST(PART_C_RISK_SCORE as FLOAT) as PART_C_RISK_SCORE,%%00010    PCA_T1020_ACSC_COUNT,%%00010    PCA_T1020_ACSC_COST,%%00010    PCA_T1019_ACSC_COUNT,%%00010    PCA_T1019_ACSC_COST,%%00010    PR_ACSC_COST,%%00010    PR_ACSC_COUNT,%%00010    CASE WHEN RC is NULL THEN 'UNDEFINED' ELSE RC END AS RC_CLEAN,%%00010    SNF_COST,%%00010    SNF_COUNT,%%00010    TOTAL_IMPACTABLE_COST,%%00010    TOTAL_IMPACTABLE_COST_PRO,%%00010    TOTAL_NON_IMPACTABLE_COST%%00010FROM &quot;VESTA_DEVELOPMENT&quot;.&quot;ANALYST_SANDBOX&quot;.&quot;CLNT_STRAT_VIP&quot; SCORE%%00010    LEFT JOIN EDIPTABLE%%00010        ON SCORE.MEMBER_ID = EDIPTABLE.MEMBER_ID%%00010            AND TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')) = EDIPTABLE.DATE_START%%00010WHERE SCORE.CLNT = 'CCA' //THIS NEEDS TO CHANGE BASED ON CLIENT%%00010    AND TO_DATE(CONCAT(LEFT(SCORE.DATA_DATE_START,4),'-',RIGHT(SCORE.DATA_DATE_START,2),'-01')) %%00010    &lt; TO_DATE(CONCAT(LEFT(CURRENT_DATE-210,7),'-01')) "/>
+        <config key="external_to_knime_mapping_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_dataTypeMapping"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="external_to_knime_mapping"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.database.node.io.reader.query.DBQueryReaderNodeFactory"/>
+    <entry key="node-name" type="xstring" value="DB Query Reader"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME database nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.database.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="4.6.0.v202206100819"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Database"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.database.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="4.6.1.v202207182243"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="DB Query Reader"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 74169, Cols: 133"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="0bab028f-a8eb-4cb1-b412-775653f8d070"/>
+    </config>
+</config>

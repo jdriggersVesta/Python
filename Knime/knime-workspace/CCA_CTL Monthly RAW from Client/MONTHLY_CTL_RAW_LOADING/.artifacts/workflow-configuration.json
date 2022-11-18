@@ -1,0 +1,14 @@
+{
+  "credentials-2": {
+    "label": "Label",
+    "type": "object",
+    "username": {
+      "type": "string",
+      "default": "jdriggers"
+    },
+    "password": {
+      "type": "string",
+      "default": "*************"
+    }
+  }
+}

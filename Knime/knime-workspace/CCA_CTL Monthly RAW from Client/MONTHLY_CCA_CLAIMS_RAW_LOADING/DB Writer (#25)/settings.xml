@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd"
+        key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="setColumns">
+            <config key="datatype">
+                <config key="typelist">
+                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+                </config>
+            </config>
+            <config key="name_pattern">
+                <entry key="pattern" type="xstring" value=""/>
+                <entry key="excludeMatching" type="xboolean" value="false"/>
+                <entry key="type" type="xstring" value="Wildcard"/>
+                <entry key="caseSensitive" type="xboolean" value="true"/>
+            </config>
+            <config key="excluded_names">
+                <entry key="array-size" type="xint" value="0"/>
+            </config>
+            <config key="included_names">
+                <entry key="array-size" type="xint" value="42"/>
+                <entry key="0" type="xstring" value="Center Name"/>
+                <entry key="1" type="xstring" value="Enrollee Identifier Intake ID"/>
+                <entry key="2" type="xstring" value="Enrollee First Name"/>
+                <entry key="3" type="xstring" value="Enrollee Last Name"/>
+                <entry key="4" type="xstring" value="Enrollee MiddleName/Initial"/>
+                <entry key="5" type="xstring" value="Enrollee Unique ID"/>
+                <entry key="6" type="xstring" value="Medicare ID"/>
+                <entry key="7" type="xstring" value="Medicare_Effective_Date"/>
+                <entry key="8" type="xstring" value="Medicare_Term_Date"/>
+                <entry key="9" type="xstring" value="MEIN.Medicaid ID/CIN Number"/>
+                <entry key="10" type="xstring" value="Enrollee Address"/>
+                <entry key="11" type="xstring" value="Enrollee Address 2"/>
+                <entry key="12" type="xstring" value="Enrollee State"/>
+                <entry key="13" type="xstring" value="Enrollee City"/>
+                <entry key="14" type="xstring" value="Enrollee Zip"/>
+                <entry key="15" type="xstring" value="Enrollee County"/>
+                <entry key="16" type="xstring" value="Enrollee Phone"/>
+                <entry key="17" type="xstring" value="Enrollee Cell Phone"/>
+                <entry key="18" type="xstring" value="Enrollee Fax"/>
+                <entry key="19" type="xstring" value="Enrollee Email"/>
+                <entry key="20" type="xstring" value="Enrollee Language"/>
+                <entry key="21" type="xstring" value="Enrollee Race"/>
+                <entry key="22" type="xstring" value="Date of Birth"/>
+                <entry key="23" type="xstring" value="SES Indicator"/>
+                <entry key="24" type="xstring" value="Institutional Indicator"/>
+                <entry key="25" type="xstring" value="Homeless Indicator"/>
+                <entry key="26" type="xstring" value="Enrollee Gender"/>
+                <entry key="27" type="xstring" value="Group Number"/>
+                <entry key="28" type="xstring" value="Effective Date"/>
+                <entry key="29" type="xstring" value="Termination Date"/>
+                <entry key="30" type="xstring" value="PCP"/>
+                <entry key="31" type="xstring" value="PCP_Name"/>
+                <entry key="32" type="xstring" value="OrganizationProviderTypeID"/>
+                <entry key="33" type="xstring" value="OrganizationProviderType"/>
+                <entry key="34" type="xstring" value="IsPrimary"/>
+                <entry key="35" type="xstring" value="Benefit Code"/>
+                <entry key="36" type="xstring" value="LOB Code"/>
+                <entry key="37" type="xstring" value="Dual Eligibility Indicator"/>
+                <entry key="38" type="xstring" value="SNP Code"/>
+                <entry key="39" type="xstring" value="Risk Arrangement"/>
+                <entry key="40" type="xstring" value="LTI_FLAG"/>
+                <entry key="41" type="xstring" value="DisenrollmentReason"/>
+            </config>
+            <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
+            <entry key="filter-type" type="xstring" value="STANDARD"/>
+        </config>
+        <entry key="dropExisting" type="xboolean" value="false"/>
+        <config key="disableDbDataPort_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="dbTable">
+            <entry key="schema" type="xstring" value="CLIENT_CLAIMS"/>
+            <entry key="database" type="xstring" value="VESTA_STAGING"/>
+            <entry key="table" type="xstring" value="CTL_ENROLL_RAW"/>
+        </config>
+        <config key="batchSize_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="showStatus" type="xboolean" value="true"/>
+        <entry key="failOnError" type="xboolean" value="true"/>
+        <config key="knime_to_external_mapping"/>
+        <config key="knime_to_external_mapping_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_dataTypeMapping"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="failOnError_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="dropExisting_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="batchSize" type="xint" value="1000"/>
+        <entry key="disableDbDataPort" type="xboolean" value="false"/>
+        <config key="showStatus_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <config key="dbTable_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_dbmetadata"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="DB_CCA_CLAIMS_RAW"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="791"/>
+        <entry key="y-coordinate" type="xint" value="819"/>
+        <entry key="width" type="xint" value="138"/>
+        <entry key="height" type="xint" value="15"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="16777215"/>
+        <entry key="defFontSize" type="xint" value="9"/>
+        <entry key="annotation-version" type="xint" value="20151123"/>
+        <config key="styles">
+            <config key="style_0">
+                <entry key="start" type="xint" value="4"/>
+                <entry key="length" type="xint" value="2"/>
+                <entry key="fontname" type="xstring" value="Arial"/>
+                <entry key="fontstyle" type="xint" value="0"/>
+                <entry key="fontsize" type="xint" value="9"/>
+                <entry key="fgcolor" type="xint" value="0"/>
+            </config>
+            <config key="style_1">
+                <entry key="start" type="xint" value="7"/>
+                <entry key="length" type="xint" value="6"/>
+                <entry key="fontname" type="xstring" value="Arial"/>
+                <entry key="fontstyle" type="xint" value="0"/>
+                <entry key="fontsize" type="xint" value="9"/>
+                <entry key="fgcolor" type="xint" value="0"/>
+            </config>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="factory" type="xstring" value="org.knime.database.node.io.write.DBWriteNodeFactory"/>
+    <entry key="node-name" type="xstring" value="DB Writer"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME database nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.database.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="4.6.0.v202206100819"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Database"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.database.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="4.6.1.v202207182243"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="DB Writer"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+        <config key="port_2">
+            <entry key="index" type="xint" value="2"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>
